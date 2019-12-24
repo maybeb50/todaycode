@@ -104,3 +104,16 @@ const sliceNumber = [10, 20, 30, 40];
 const sliceIndex = sliceNumber.slice(2);
 console.log(sliceIndex); // [30, 40]
 console.log(sliceNumber); // [10, 20, 30, 40]
+
+// -------------------------------------------------------------------- //
+
+// 배열 내장 함수 9. shift, pop, unshift, push
+// shift는 첫번째 원소를 추출해줌. shift는 기본 배열을 삭제함.
+// pop은 마지막 원소를 삭제시킴. 
+
+
+// concat 
+// 여러개의 배열을 하나의 배열로 만들어줌, 기존의 값을 건드리지 않음.
+
+// join
+// 배열의 값을 문자열 값으로 합쳐줄 떄 사용 
