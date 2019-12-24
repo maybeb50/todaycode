@@ -86,3 +86,21 @@ var index3 = todos.filter(todo => todo.done === false);
 // var index3 = todos.filter(todo => !todo.done);
 // var index3 = todos.filter(todo => todo.done !== true);
 console.log(index3);
+
+// -------------------------------------------------------------------- //
+
+// 배열 내장 함수 7. splice
+// 기존의 배열을 삭제 또는 교체, 새 요소를 추가하여 배열의 내용을 변경
+// array.splice(start, deleteCount, item1, item2..)
+const spliceNumbers = [10, 20, 30, 40];
+const spliceIndex = spliceNumbers.indexOf(30);
+spliceNumbers.splice(spliceIndex, 1); // [30]
+console.log(spliceNumbers);           // [10, 20, 40]
+
+// 배열 내장 함수 8. slice
+// 기존의 배열은 그대로 둔 뒤에 잘라내서 새로운 배열 객체로 반환
+// array.slice(begin, end)
+const sliceNumber = [10, 20, 30, 40];
+const sliceIndex = sliceNumber.slice(2);
+console.log(sliceIndex); // [30, 40]
+console.log(sliceNumber); // [10, 20, 30, 40]
