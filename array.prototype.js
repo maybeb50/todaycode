@@ -107,13 +107,46 @@ console.log(sliceNumber); // [10, 20, 30, 40]
 
 // -------------------------------------------------------------------- //
 
-// 배열 내장 함수 9. shift, pop, unshift, push
-// shift는 첫번째 원소를 추출해줌. shift는 기본 배열을 삭제함.
-// pop은 마지막 원소를 삭제시킴. 
+// 배열 내장 함수 9. shift
+// shift는 0번째 원소를 제거하고 제거한 값을 반홤함.
+// arr.shift()
+const shiftNumber = [1, 2, 3, 4];
+shiftNumber.shift(); // 1
+console.log(shiftNumber); // [2, 3, 4] shift는 기본 배열을 삭제함.
 
+// 배열 내장 함수 10. pop
+// pop은 마지막 원소를 제거하고 그 요소를 반환함
+//arr.pop()
+const popNumber = [1, 2, 3, 4];
+popNumber.pop(); // 4
+console.log(popNumber); // [1, 2, 3] pop은 기본 배열을 삭제함
 
-// concat 
+// 배열 내장 함수 11. unshift
+// unshift는 새로운 요소를 배열의 맨 앞쪽에 추가하고 새로운 길이를 반환함
+// arr.unshift([...element])
+const unshiftNumber = [1, 2, 3, 4];
+unshiftNumber.unshift(4, 8); // 6 반환함
+console.log(unshiftNumber); // [4, 8, 1, 2, 3, 4] unshift는 기존
+
+// 배열 내장 함수 12. push
+// 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환함
+// arr.push(element1[, ...[, elementN]])
+const pushNumber = [1, 2, 3, 4];
+pushNumber.push(40); // 5 배열의 길이를 반환함
+console.log(pushNumber); // [1, 2, 3, 4, 40]
+
+// 배열 내장 함수 13. concat
 // 여러개의 배열을 하나의 배열로 만들어줌, 기존의 값을 건드리지 않음.
+// str.concat(string2, string3[, ..., stringN])
+const str1 = "hello";
+const str2 = "world";
+const resultConcat = str1.concat(" ", str2);
+console.log(resultConcat); // hello world  주어진 문자열을 모두 붙인 문자열을 반환함
 
-// join
-// 배열의 값을 문자열 값으로 합쳐줄 떄 사용 
+// 배열 내장 함수 14. join
+// 배열의 값을 문자열 값으로 합쳐줄 때 사용
+// typeaarray.join('separator')
+const joinString = [10, 20, 30, 40, 50];
+joinString.join(""); // 1020304050
+
+// -------------------------------------------------------------------- //
