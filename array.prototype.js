@@ -150,3 +150,33 @@ const joinString = [10, 20, 30, 40, 50];
 joinString.join(""); // 1020304050
 
 // -------------------------------------------------------------------- //
+
+// 배열 내장 함수 15. reduce 
+// 배열을 순회하며 하나의 결과 값을 반환함(?) 설명이 부족쓰
+// arr.reduce(callback[, initialValue])
+// 매개변수 : accumulator, currentValue, currentIndex, array, initialValue
+// 반환값 : 누적 계산의 결과 값 
+
+// reduce 예시1.
+const reduceTest = [1, 2, 3, 4, 5];
+const avg = reduceTest.reduce((accumulator, current, index, array) => {
+  if(index === reduceTest.length - 1) {
+    retrun (accumulator + current) / reduceTest.length;
+  }
+  retrun accumulator + current;
+}, 0);
+console.log(reduceTest);  // 3
+
+// reduce 예시2. 
+const alphabets = ['a', 'b', 'c', 'c'];
+const alphabetCounts = alphabets.reduce((acc, current) => {
+  if(acc[current]){
+    acc[current] += 1; 
+  } else {
+     acc[current] = 1; 
+  }
+  return acc;
+}, {});
+console.log(alphabetCounts); // {a: 1, b: 1, c: 2}
+
+
